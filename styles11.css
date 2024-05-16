@@ -1,0 +1,109 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    overflow: hidden; 
+}
+
+.vertical-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 20%; 
+    height: 100%;
+    background-color: black;
+    color: #fff;
+    padding-top: 20px;
+    box-sizing: border-box; 
+}
+
+.vertical-nav {
+    float: left;
+    width: 20%;
+}
+
+.vertical-nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.vertical-nav ul li {
+    margin-bottom: 10px;
+}
+
+.vertical-nav ul li a {
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    color: white;
+    transition: color 0.3s;
+}
+
+.vertical-nav ul li a:hover {
+    color: #ff0000;
+}
+
+.contact-info {
+    text-align: center;
+    margin: 20px auto;
+}
+
+.map {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.map img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.prices {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 20%;
+    margin-top: 20px;
+    display: inline-block;
+    z-index: 1000; 
+}
+
+.price-option {
+    margin-bottom: 10px;
+}
+
+.price-option label {
+    display: inline-block;
+    width: 150px;
+}
+
+.price-option select {
+    width: 200px;
+}
+
+.total {
+    display: inline-block; 
+    margin-top: 20px;
+}
+
+#buy-button {
+    display: inline-block;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #006400;
+    color: #fff;
+    cursor: pointer;
+}
+
+#buy-button:hover {
+    background-color: #004d00;
+}

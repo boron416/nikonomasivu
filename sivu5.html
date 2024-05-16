@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yhteystiedot Peikkometsä</title>
+    <link rel="stylesheet" href="styles11.css">
+</head>
+<body>
+    <div class="container">
+        <nav class="vertical-nav">
+            <ul>
+                <li><a href="index2.html">Koti</a></li>
+                <li><a href="sivu5.html">Asiointi</a></li>
+                <li><a href="sivu6.html">Palvelut</a></li>
+                <li><a href="sivu7.html">Yhteystiedot</a></li>
+            </ul>
+        </nav>
+    </div>
+
+        <div class="contact-info">
+            <p>Osoite: Peikkopolku 1, Peikkokylä</p>
+            <p>Puhelin: 012-3456789</p>
+            <p>Sähköposti: peikot@peikkometsa.fi</p>
+            <p>Aukiolo ma-pe klo 8-20</p>
+        </div>
+
+        <div class="map">
+            <img src="kartta.png" alt="Peikkometsä">
+        </div>
+
+        <div class="prices">
+            <h2>Hinnat</h2>
+            <div class="price-option">
+                <label for="children">Lapset alle 10v:</label>
+                <select id="children" name="children">
+                    <option value="0">Valitse määrä</option>
+                    <option value="1">1 lapsi</option>
+                    <option value="2">2 lasta</option>
+                    <option value="3">3 lasta</option>
+                </select>
+                <span class="price">5€/kpl</span>
+            </div>
+            <div class="price-option">
+                <label for="adults">Aikuiset:</label>
+                <select id="adults" name="adults">
+                    <option value="0">Valitse määrä</option>
+                    <option value="1">1 aikuinen</option>
+                    <option value="2">2 aikuista</option>
+                    <option value="3">3 aikuista</option>
+                </select>
+                <span class="price">10€/kpl</span>
+            </div>
+            <div class="total">
+                <h3>Loppusumma:</h3>
+                <span id="total-price">0€</span>
+            </div>
+            <button id="buy-button">Osta</button>
+        </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            var childrenSelect = document.getElementById("children");
+            var adultsSelect = document.getElementById("adults");
+            var totalPriceSpan = document.getElementById("total-price");
+            var buyButton = document.getElementById("buy-button");
+
+            function calculateTotalPrice() {
+                var childrenPrice = parseInt(childrenSelect.value) * 5;
+                var adultsPrice = parseInt(adultsSelect.value) * 10;
+                var totalPrice = childrenPrice + adultsPrice;
+                totalPriceSpan.textContent = totalPrice + "€";
+            }
+
+            childrenSelect.addEventListener("change", calculateTotalPrice);
+            adultsSelect.addEventListener("change", calculateTotalPrice);
+
+            buyButton.addEventListener("click", function() {
+                alert("Kiitos ostostasi!");
+            });
+        });
+    </script>
+</body>
+</html>

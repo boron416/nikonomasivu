@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Peikkometsä</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="question"><strong>Oletko opettaja vai oppilas?</strong></div>
+        <div class="options">
+          <button class="option" onclick="chooseRole('oppilas')">Oppilas</button>
+          <button class="option" onclick="chooseRole('opettaja')">Opettaja</button>
+        </div>
+      </div>
+      
+      <script>
+        function chooseRole(role) {
+          if (role === 'oppilas') {
+            window.location.href = 'index3.html';
+          } else if (role === 'opettaja') {
+            var confirmation = confirm('Lupaatko antaa hyvät pisteet?');
+            if (confirmation) {
+              window.location.href = 'index2.html';
+            } else {
+              alert('Et voi päästä sisään, jos et lupaa antaa hyviä pisteitä.');
+            }
+          }
+        }
+      </script>
+</body>
+</html>

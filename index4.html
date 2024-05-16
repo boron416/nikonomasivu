@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Peikkometsä</title>
+    <link rel="stylesheet" href="styles9.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Piditkö sivusta?</h1>
+        <form id="surveyForm" action="index5.html" method="GET">
+            <label for="like">Valitse vastaus:</label>
+            <select id="like" name="like">
+                <option value="">Valitse</option>
+                <option value="yes">Kyllä</option>
+                <option value="no">Ei</option>
+            </select>
+            <br>
+            <label for="birthday">Syntymäpäivä:</label>
+            <input type="date" id="birthday" name="birthday">
+            <br>
+            <label for="firstname">Etunimi (enintään 10 merkkiä):</label>
+            <input type="text" id="firstname" name="firstname" maxlength="10">
+            <br>
+            <input type="submit" id="submitBtn" value="Lähetä" disabled> 
+        </form>
+    </div>
+    <script>
+        document.getElementById('surveyForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            var like = document.getElementById('like').value;
+            var birthday = document.getElementById('birthday').value;
+            var firstname = document.getElementById('firstname').value;
+
+            if (like && birthday && firstname) {
+                this.submit(); 
+            } else {
+                alert('Täytä kaikki kentät ennen lomakkeen lähettämistä.');
+            }
+        });
+
+        document.getElementById('surveyForm').addEventListener('change', function() {
+            var like = document.getElementById('like').value;
+            var birthday = document.getElementById('birthday').value;
+            var firstname = document.getElementById('firstname').value;
+
+            var submitBtn = document.getElementById('submitBtn');
+            if (like && birthday && firstname) {
+                submitBtn.disabled = false;
+            } else {
+                submitBtn.disabled = true; 
+            }
+        });
+    </script>
+</body>
+</html>

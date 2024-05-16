@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Peikkometsä</title>
+    <link rel="stylesheet" href="styles10.css">
+</head>
+<body>
+    <div class="container">
+        <h1 id="thank-you-text"><span class="strong-red">Kiitos käynnistä</span>, <span class="strong-red" id="username"></span>!</h1>
+    </div>
+    <video id="fullscreen-video" autoplay loop muted>
+        <source src="135139-761273467_small.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+    <script>
+        var urlParams = new URLSearchParams(window.location.search);
+        var username = urlParams.get('firstname');
+        document.getElementById('username').innerText = username + "!";
+    </script>
+</body>
+</html>

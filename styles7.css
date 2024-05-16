@@ -1,0 +1,26 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-image: url('man-869215_1280.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+  }
+  .typingEffect {
+    font-family: monospace;
+    font-size: 24px;
+    white-space: pre;
+    overflow: hidden;
+    border-right: .15em solid orange;
+    animation: typing 5s steps(14, end), blink-caret .75s step-end infinite;
+}
+
+@keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+}
+
+@keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: orange }
+}

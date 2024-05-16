@@ -1,0 +1,155 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-image: url('metsä.jpeg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+.container {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 20px;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+}
+
+.box {
+  width: 30%;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  margin: 10px;
+  box-sizing: border-box;
+}
+
+.box a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.box:hover {
+  background-color: #000;
+}
+
+.box img {
+  width: 100%;
+  height: auto; 
+  border-radius: 5px;
+}
+
+footer {
+  background-color: #333;
+  color: #fff;
+  padding: 10px 0;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+}
+
+.vertical-nav ul {
+  list-style-type: none; 
+  padding: 0;
+}
+
+.vertical-nav li {
+  margin-bottom: 5px; 
+}
+
+.vertical-nav a {
+  display: block;
+  padding: 10px; 
+  text-decoration: none;
+  color: #006400; 
+  transition: color 0.3s;
+}
+
+.vertical-nav a:hover {
+  color: #ff0000; 
+  text-decoration: none;
+}
+
+.buttons-container {
+  position: absolute;
+  top: 10px; 
+  right: 10px; 
+}
+
+.button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  text-decoration: none;
+  margin-right: 10px; 
+  border-radius: 5px;
+}
+
+.button:hover {
+  background-color: #0056b3;
+}
+#carouselExampleControls {
+  max-width: 400px; 
+  margin: auto;
+}
+.carousel-item img {
+  max-width: 100%; 
+  height: auto; 
+}
+
+.container {
+  max-width: 800px;
+  margin: 40px auto 0;
+  padding: 20px;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+}
+
+footer {
+  background-color: black;
+  color: #fff;
+  padding: 10px 0;
+  text-align: center;
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+}
+.activity-navigation ul li {
+  position: relative;
+}
+
+.activity-dropdown {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  z-index: 1;
+  top: calc(100% + 10px);
+  left: 0;
+}
+
+.activity-navigation ul li:hover .activity-dropdown {
+  display: block !important;
+}
+
+.activity-dropdown ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.activity-dropdown ul li a {
+  display: block;
+  padding: 8px 16px;
+  text-decoration: none;
+  color: #333;
+}
+
+.activity-dropdown ul li a:hover {
+  background-color: #ddd;
+}
